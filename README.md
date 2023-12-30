@@ -24,7 +24,35 @@ composer require ergebnis/data-generator
 
 ## Usage
 
-💡 This is a great place for showing a few usage examples!
+This project comes with the following data generators:
+
+- [`Ergebnis\DataGenerator\ValueGenerator`](#valuegenerator)
+
+### `ValueGenerator`
+
+#### Generate one or more values from a list of `string` values
+
+```php
+<?php
+
+declare(strict_types=1);
+
+use Ergebnis\DataGenerator;
+
+$generator = new DataGenerator\ValueGenerator(
+    'foo',
+    'bar',
+    'baz',
+);
+
+foreach ($generator->generate() as $value) {
+    echo $value . PHP_EOL
+}
+
+// foo
+// bar
+// baz
+```
 
 ## Changelog
 

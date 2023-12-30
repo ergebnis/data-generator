@@ -13,19 +13,10 @@ declare(strict_types=1);
 
 namespace Ergebnis\DataGenerator;
 
-final class Example
+interface StringGenerator
 {
-    private function __construct(private readonly string $value)
-    {
-    }
-
-    public static function fromString(string $value): self
-    {
-        return new self($value);
-    }
-
-    public function toString(): string
-    {
-        return $this->value;
-    }
+    /**
+     * @return \Generator<string>
+     */
+    public function generate(): \Generator;
 }
