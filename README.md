@@ -30,7 +30,7 @@ This project comes with the following data generators:
 
 ### `ValueGenerator`
 
-#### Generate one or more values from a list of `string` values
+Use the `ValueGenerator` to generate one or more values from a list of `string` values:
 
 ```php
 <?php
