@@ -86,7 +86,7 @@ repository:
   has_pages: false
   has_projects: false
   has_wiki: false
-  is_template: true
+  is_template: false
   name: "data-generator"
   private: false
 
