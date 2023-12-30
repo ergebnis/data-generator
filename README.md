@@ -26,8 +26,45 @@ composer require ergebnis/data-generator
 
 This project comes with the following data generators:
 
+- [`Ergebnis\DataGenerator\ConcatenatingValueGenerator`](#ConcatenatingValuegenerator)
 - [`Ergebnis\DataGenerator\OptionalValueGenerator`](#optionalvaluegenerator)
 - [`Ergebnis\DataGenerator\ValueGenerator`](#valuegenerator)
+
+### `ConcatenatingValueGenerator`
+
+Use the `ConcatenatingValueGenerator` to generate values by concatenating values generated from one or more `StringGenerator`s:
+
+```php
+<?php
+
+declare(strict_types=1);
+
+use Ergebnis\DataGenerator;
+
+$generator = new DataGenerator\ConcatenatingValueGenerator(
+    new DataGenerator\ValueGenerator(
+        'foo',
+        'bar',
+        'baz',
+    ),
+    new DataGenerator\ValueGenerator('-'),
+    new DataGenerator\ValueGenerator(
+        'qux',
+        'quux',
+    ),
+);
+
+foreach ($generator->generate() as $value) {
+    echo $value . PHP_EOL
+}
+
+// foo-qux
+// foo-quux
+// bar-qux
+// bar-quux
+// baz-qux
+// baz-quux
+```
 
 ### `OptionalValueGenerator`
 
