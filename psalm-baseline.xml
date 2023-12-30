@@ -10,6 +10,11 @@
       <code>$values</code>
     </MixedArgument>
   </file>
+  <file src="test/Unit/SequentialValueGeneratorTest.php">
+    <MixedArgument>
+      <code>$values</code>
+    </MixedArgument>
+  </file>
   <file src="test/Unit/ValueGeneratorTest.php">
     <MixedArgument>
       <code>$values</code>
