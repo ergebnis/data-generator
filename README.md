@@ -28,6 +28,7 @@ This project comes with the following data generators:
 
 - [`Ergebnis\DataGenerator\ConcatenatingValueGenerator`](#ConcatenatingValuegenerator)
 - [`Ergebnis\DataGenerator\OptionalValueGenerator`](#optionalvaluegenerator)
+- [`Ergebnis\DataGenerator\SequentialValueGenerator`](#sequentialvaluegenerator)
 - [`Ergebnis\DataGenerator\ValueGenerator`](#valuegenerator)
 
 ### `ConcatenatingValueGenerator`
@@ -91,6 +92,40 @@ foreach ($generator->generate() as $value) {
 // foo
 // bar
 // baz
+```
+
+### `SequentialValueGenerator`
+
+Use the `SequentialValueGenerator` to generate one or more values from one or more `StringGenerator`s:
+
+```php
+<?php
+
+declare(strict_types=1);
+
+use Ergebnis\DataGenerator;
+
+$generator = new DataGenerator\SequentialValueGenerator(
+    new DataGenerator\ValueGenerator(
+        'foo',
+        'bar',
+        'baz',
+    ),
+    new DataGenerator\ValueGenerator(
+      'qux',
+      'quux',
+    ),
+);
+
+foreach ($generator->generate() as $value) {
+    echo $value . PHP_EOL
+}
+
+// foo
+// bar
+// baz
+// qux
+// quux
 ```
 
 ### `ValueGenerator`
