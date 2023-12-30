@@ -26,7 +26,7 @@ composer require ergebnis/data-generator
 
 This project comes with the following data generators:
 
-- [`Ergebnis\DataGenerator\ConcatenatingValueGenerator`](#ConcatenatingValuegenerator)
+- [`Ergebnis\DataGenerator\ConcatenatingValueGenerator`](#concatenatingvaluegenerator)
 - [`Ergebnis\DataGenerator\OptionalValueGenerator`](#optionalvaluegenerator)
 - [`Ergebnis\DataGenerator\SequentialValueGenerator`](#sequentialvaluegenerator)
 - [`Ergebnis\DataGenerator\ValueGenerator`](#valuegenerator)
