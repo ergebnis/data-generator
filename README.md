@@ -31,7 +31,7 @@ This project comes with the following data generators:
 
 ### `OptionalValueGenerator`
 
-#### Generate one or more values from a list of `string` values
+Use the `OptionalValueGenerator` to generate an empty string and one or more values from a list of `string` values:
 
 ```php
 <?php
