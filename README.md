@@ -26,7 +26,35 @@ composer require ergebnis/data-generator
 
 This project comes with the following data generators:
 
+- [`Ergebnis\DataGenerator\OptionalValueGenerator`](#optionalvaluegenerator)
 - [`Ergebnis\DataGenerator\ValueGenerator`](#valuegenerator)
+
+### `OptionalValueGenerator`
+
+#### Generate one or more values from a list of `string` values
+
+```php
+<?php
+
+declare(strict_types=1);
+
+use Ergebnis\DataGenerator;
+
+$generator = new DataGenerator\OptionalValueGenerator(
+    'foo',
+    'bar',
+    'baz',
+);
+
+foreach ($generator->generate() as $value) {
+    echo $value . PHP_EOL
+}
+
+// empty string
+// foo
+// bar
+// baz
+```
 
 ### `ValueGenerator`
 
