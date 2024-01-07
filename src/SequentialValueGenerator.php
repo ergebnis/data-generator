@@ -16,7 +16,7 @@ namespace Ergebnis\DataGenerator;
 final class SequentialValueGenerator implements StringGenerator
 {
     /**
-     * @var array<StringGenerator>
+     * @var list<StringGenerator>
      */
     private readonly array $generators;
 

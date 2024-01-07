@@ -16,7 +16,7 @@ namespace Ergebnis\DataGenerator;
 final class ValueGenerator implements StringGenerator
 {
     /**
-     * @var array<string>
+     * @var list<string>
      */
     private readonly array $values;
 
