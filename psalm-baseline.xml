@@ -1,5 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <files psalm-version="5.18.0@b113f3ed0259fd6e212d87c3df80eec95a6abf19">
+  <file src="src/OptionalValueGenerator.php">
+    <PropertyTypeCoercion>
+      <code>$values</code>
+    </PropertyTypeCoercion>
+  </file>
+  <file src="src/SequentialValueGenerator.php">
+    <PropertyTypeCoercion>
+      <code>$generators</code>
+    </PropertyTypeCoercion>
+  </file>
+  <file src="src/ValueGenerator.php">
+    <PropertyTypeCoercion>
+      <code>$values</code>
+    </PropertyTypeCoercion>
+  </file>
   <file src="test/Unit/ConcatenatingValueGeneratorTest.php">
     <MixedArgument>
       <code>$values</code>
