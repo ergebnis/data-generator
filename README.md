@@ -6,7 +6,6 @@
 [![Renew](https://github.com/ergebnis/data-generator/workflows/Renew/badge.svg)](https://github.com/ergebnis/data-generator/actions)
 
 [![Code Coverage](https://codecov.io/gh/ergebnis/data-generator/branch/main/graph/badge.svg)](https://codecov.io/gh/ergebnis/data-generator)
-[![Type Coverage](https://shepherd.dev/github/ergebnis/data-generator/coverage.svg)](https://shepherd.dev/github/ergebnis/data-generator)
 
 [![Latest Stable Version](https://poser.pugx.org/ergebnis/data-generator/v/stable)](https://packagist.org/packages/ergebnis/data-generator)
 [![Total Downloads](https://poser.pugx.org/ergebnis/data-generator/downloads)](https://packagist.org/packages/ergebnis/data-generator)
