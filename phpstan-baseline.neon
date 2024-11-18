@@ -1,0 +1,47 @@
+parameters:
+	ignoreErrors:
+		-
+			message: "#^Property Ergebnis\\\\DataGenerator\\\\ConcatenatingValueGenerator\\:\\:\\$firstGenerator \\(Ergebnis\\\\DataGenerator\\\\StringGenerator\\) does not accept Ergebnis\\\\DataGenerator\\\\StringGenerator\\|null\\.$#"
+			count: 1
+			path: src/ConcatenatingValueGenerator.php
+
+		-
+			message: "#^Property Ergebnis\\\\DataGenerator\\\\OptionalValueGenerator\\:\\:\\$values \\(array\\<int, string\\>\\) does not accept array\\<int\\|string, string\\>\\.$#"
+			count: 1
+			path: src/OptionalValueGenerator.php
+
+		-
+			message: "#^Property Ergebnis\\\\DataGenerator\\\\SequentialValueGenerator\\:\\:\\$generators \\(array\\<int, Ergebnis\\\\DataGenerator\\\\StringGenerator\\>\\) does not accept array\\<int\\|string, Ergebnis\\\\DataGenerator\\\\StringGenerator\\>\\.$#"
+			count: 1
+			path: src/SequentialValueGenerator.php
+
+		-
+			message: "#^Property Ergebnis\\\\DataGenerator\\\\ValueGenerator\\:\\:\\$values \\(array\\<int, string\\>\\) does not accept array\\<int\\|string, string\\>\\.$#"
+			count: 1
+			path: src/ValueGenerator.php
+
+		-
+			message: "#^Only iterables can be unpacked, array\\|string given in argument \\#1\\.$#"
+			count: 1
+			path: test/Unit/ConcatenatingValueGeneratorTest.php
+
+		-
+			message: "#^Only iterables can be unpacked, array\\|string given in argument \\#1\\.$#"
+			count: 1
+			path: test/Unit/OptionalValueGeneratorTest.php
+
+		-
+			message: "#^Parameter \\#2 \\.\\.\\.\\$arrays of function array_merge expects array, array\\|string given\\.$#"
+			count: 1
+			path: test/Unit/OptionalValueGeneratorTest.php
+
+		-
+			message: "#^Only iterables can be unpacked, array\\|string given in argument \\#1\\.$#"
+			count: 1
+			path: test/Unit/SequentialValueGeneratorTest.php
+
+		-
+			message: "#^Only iterables can be unpacked, array\\|string given in argument \\#1\\.$#"
+			count: 1
+			path: test/Unit/ValueGeneratorTest.php
+
