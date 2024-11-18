@@ -8,6 +8,10 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 
 For a full diff see [`1.0.0...main`][1.0.0...main].
 
+### Added
+
+- Added support for PHP 8.4 ([#146]), by [@localheinz]
+
 ## [`1.0.0`][1.0.0]
 
 For a full diff see [`f4208b3...1.0.0`][f4208b3...1.0.0].
@@ -28,5 +32,6 @@ For a full diff see [`f4208b3...1.0.0`][f4208b3...1.0.0].
 [#2]: https://github.com/ergebnis/data-generator/pull/2
 [#3]: https://github.com/ergebnis/data-generator/pull/3
 [#4]: https://github.com/ergebnis/data-generator/pull/4
+[#146]: https://github.com/ergebnis/data-generator/pull/146
 
 [@localheinz]: https://github.com/localheinz
