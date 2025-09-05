@@ -41,7 +41,7 @@ For a full diff see [`f4208b3...1.0.0`][f4208b3...1.0.0].
 
 [f4208b3...1.0.0]: https://github.com/ergebnis/data-generator/compare/f4208b3...1.0.0
 [1.0.0...1.1.0]: https://github.com/ergebnis/data-generator/compare/1.0.0...1.1.0
-[1.1.0...main]: https://github.com/ergebnis/data-generator/compare/1.1.0...1.2.0
+[1.1.0...1.2.0]: https://github.com/ergebnis/data-generator/compare/1.1.0...1.2.0
 [1.2.0...main]: https://github.com/ergebnis/data-generator/compare/1.2.0...main
 
 [#1]: https://github.com/ergebnis/data-generator/pull/1
