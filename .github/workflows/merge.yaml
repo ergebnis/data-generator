@@ -9,9 +9,14 @@ on: # yamllint disable-line rule:truthy
     workflows:
       - "Integrate"
 
+permissions: {}
+
 jobs:
   merge:
     name: "Merge"
+
+    permissions:
+      contents: "read"
 
     runs-on: "ubuntu-latest"
 
