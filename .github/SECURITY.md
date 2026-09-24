@@ -4,13 +4,13 @@
 
 The following versions of `ergebnis/data-generator` have active support:
 
-- `^1.3.0`
+- `^1.4.0`
 
 ## Unsupported Versions
 
 The following versions of `ergebnis/data-generator` have reached their end of life:
 
-- `<1.3.0`
+- `<1.4.0`
 
 ## Reporting a Vulnerability
 
