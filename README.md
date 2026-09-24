@@ -1,9 +1,9 @@
 # data-generator
 
-[![Integrate](https://github.com/ergebnis/data-generator/workflows/Integrate/badge.svg)](https://github.com/ergebnis/data-generator/actions)
-[![Merge](https://github.com/ergebnis/data-generator/workflows/Merge/badge.svg)](https://github.com/ergebnis/data-generator/actions)
-[![Release](https://github.com/ergebnis/data-generator/workflows/Release/badge.svg)](https://github.com/ergebnis/data-generator/actions)
-[![Renew](https://github.com/ergebnis/data-generator/workflows/Renew/badge.svg)](https://github.com/ergebnis/data-generator/actions)
+[![Integrate](https://github.com/ergebnis/data-generator/actions/workflows/integrate.yaml/badge.svg?branch=main)](https://github.com/ergebnis/data-generator/actions/workflows/integrate.yaml)
+[![Merge](https://github.com/ergebnis/data-generator/actions/workflows/merge.yaml/badge.svg)](https://github.com/ergebnis/data-generator/actions/workflows/merge.yaml)
+[![Release](https://github.com/ergebnis/data-generator/actions/workflows/release.yaml/badge.svg)](https://github.com/ergebnis/data-generator/actions/workflows/release.yaml)
+[![Renew](https://github.com/ergebnis/data-generator/actions/workflows/renew.yaml/badge.svg)](https://github.com/ergebnis/data-generator/actions/workflows/renew.yaml)
 
 [![Code Coverage](https://codecov.io/gh/ergebnis/data-generator/branch/main/graph/badge.svg)](https://codecov.io/gh/ergebnis/data-generator)
 
