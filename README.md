@@ -9,7 +9,7 @@
 
 [![Latest Stable Version](https://poser.pugx.org/ergebnis/data-generator/v/stable)](https://packagist.org/packages/ergebnis/data-generator)
 [![Total Downloads](https://poser.pugx.org/ergebnis/data-generator/downloads)](https://packagist.org/packages/ergebnis/data-generator)
-[![Monthly Downloads](http://poser.pugx.org/ergebnis/data-generator/d/monthly)](https://packagist.org/packages/ergebnis/data-generator)
+[![Monthly Downloads](https://poser.pugx.org/ergebnis/data-generator/d/monthly)](https://packagist.org/packages/ergebnis/data-generator)
 
 This project provides a [`composer`](https://getcomposer.org) package with data generators.
 
