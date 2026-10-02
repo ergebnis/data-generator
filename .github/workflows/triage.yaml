@@ -14,9 +14,6 @@ jobs:
   label:
     name: "Label"
 
-    permissions:
-      contents: "read"
-
     runs-on: "ubuntu-24.04"
 
     timeout-minutes: 5
