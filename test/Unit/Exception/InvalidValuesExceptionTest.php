@@ -13,15 +13,15 @@ declare(strict_types=1);
 
 namespace Ergebnis\DataGenerator\Test\Unit\Exception;
 
-use Ergebnis\DataGenerator\Exception;
+use Ergebnis\DataGenerator;
 use PHPUnit\Framework;
 
-#[Framework\Attributes\CoversClass(Exception\InvalidValuesException::class)]
+#[Framework\Attributes\CoversClass(DataGenerator\Exception\InvalidValuesException::class)]
 final class InvalidValuesExceptionTest extends Framework\TestCase
 {
     public function testEmptyReturnsException(): void
     {
-        $exception = Exception\InvalidValuesException::empty();
+        $exception = DataGenerator\Exception\InvalidValuesException::empty();
 
         $message = 'Values can not be empty.';
 

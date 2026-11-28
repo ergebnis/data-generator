@@ -13,29 +13,27 @@ declare(strict_types=1);
 
 namespace Ergebnis\DataGenerator\Test\Unit;
 
-use Ergebnis\DataGenerator\Exception;
-use Ergebnis\DataGenerator\Test;
-use Ergebnis\DataGenerator\ValueGenerator;
+use Ergebnis\DataGenerator;
 use PHPUnit\Framework;
 
-#[Framework\Attributes\CoversClass(ValueGenerator::class)]
-#[Framework\Attributes\UsesClass(Exception\InvalidValuesException::class)]
+#[Framework\Attributes\CoversClass(DataGenerator\ValueGenerator::class)]
+#[Framework\Attributes\UsesClass(DataGenerator\Exception\InvalidValuesException::class)]
 final class ValueGeneratorTest extends Framework\TestCase
 {
-    use Test\Util\Helper;
+    use DataGenerator\Test\Util\Helper;
 
     public function testConstructorRejectsEmptyValues(): void
     {
-        $this->expectException(Exception\InvalidValuesException::class);
+        $this->expectException(DataGenerator\Exception\InvalidValuesException::class);
 
-        new ValueGenerator();
+        new DataGenerator\ValueGenerator();
     }
 
     public function testGenerateReturnsGeneratorThatYieldsValues(): void
     {
         $values = self::faker()->words();
 
-        $generator = new ValueGenerator(...$values);
+        $generator = new DataGenerator\ValueGenerator(...$values);
 
         $generated = \iterator_to_array($generator->generate());
 

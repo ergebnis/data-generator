@@ -13,15 +13,15 @@ declare(strict_types=1);
 
 namespace Ergebnis\DataGenerator\Test\Unit\Exception;
 
-use Ergebnis\DataGenerator\Exception;
+use Ergebnis\DataGenerator;
 use PHPUnit\Framework;
 
-#[Framework\Attributes\CoversClass(Exception\InvalidGeneratorsException::class)]
+#[Framework\Attributes\CoversClass(DataGenerator\Exception\InvalidGeneratorsException::class)]
 final class InvalidGeneratorsExceptionTest extends Framework\TestCase
 {
     public function testEmptyReturnsException(): void
     {
-        $exception = Exception\InvalidGeneratorsException::empty();
+        $exception = DataGenerator\Exception\InvalidGeneratorsException::empty();
 
         $message = 'Generators can not be empty.';
 
