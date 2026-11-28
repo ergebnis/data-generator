@@ -11,31 +11,28 @@ declare(strict_types=1);
  * @see https://github.com/ergebnis/data-generator
  */
 
-use Ergebnis\DataGenerator\Exception;
-use Ergebnis\DataGenerator\SequentialValueGenerator;
-use Ergebnis\DataGenerator\Test;
-use Ergebnis\DataGenerator\ValueGenerator;
+use Ergebnis\DataGenerator;
 use PHPUnit\Framework;
 
-#[Framework\Attributes\CoversClass(SequentialValueGenerator::class)]
-#[Framework\Attributes\UsesClass(Exception\InvalidGeneratorsException::class)]
-#[Framework\Attributes\UsesClass(ValueGenerator::class)]
+#[Framework\Attributes\CoversClass(DataGenerator\SequentialValueGenerator::class)]
+#[Framework\Attributes\UsesClass(DataGenerator\Exception\InvalidGeneratorsException::class)]
+#[Framework\Attributes\UsesClass(DataGenerator\ValueGenerator::class)]
 final class SequentialValueGeneratorTest extends Framework\TestCase
 {
-    use Test\Util\Helper;
+    use DataGenerator\Test\Util\Helper;
 
     public function testConstructorRejectsEmptyGenerators(): void
     {
-        $this->expectException(Exception\InvalidGeneratorsException::class);
+        $this->expectException(DataGenerator\Exception\InvalidGeneratorsException::class);
 
-        new SequentialValueGenerator();
+        new DataGenerator\SequentialValueGenerator();
     }
 
     public function testGenerateReturnsGeneratorThatYieldsValuesFromOneGenerator(): void
     {
         $values = self::faker()->words();
 
-        $generator = new SequentialValueGenerator(new ValueGenerator(...$values));
+        $generator = new DataGenerator\SequentialValueGenerator(new DataGenerator\ValueGenerator(...$values));
 
         $generated = \iterator_to_array($generator->generate());
 
@@ -44,13 +41,13 @@ final class SequentialValueGeneratorTest extends Framework\TestCase
 
     public function testGenerateReturnsGeneratorThatYieldsValuesFromTwoGenerators(): void
     {
-        $generator = new SequentialValueGenerator(
-            new ValueGenerator(
+        $generator = new DataGenerator\SequentialValueGenerator(
+            new DataGenerator\ValueGenerator(
                 'foo',
                 'bar',
                 'baz',
             ),
-            new ValueGenerator(
+            new DataGenerator\ValueGenerator(
                 'qux',
                 'quux',
             ),

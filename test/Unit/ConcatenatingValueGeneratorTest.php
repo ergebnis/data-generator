@@ -11,31 +11,28 @@ declare(strict_types=1);
  * @see https://github.com/ergebnis/data-generator
  */
 
-use Ergebnis\DataGenerator\ConcatenatingValueGenerator;
-use Ergebnis\DataGenerator\Exception;
-use Ergebnis\DataGenerator\Test;
-use Ergebnis\DataGenerator\ValueGenerator;
+use Ergebnis\DataGenerator;
 use PHPUnit\Framework;
 
-#[Framework\Attributes\CoversClass(ConcatenatingValueGenerator::class)]
-#[Framework\Attributes\UsesClass(Exception\InvalidGeneratorsException::class)]
-#[Framework\Attributes\UsesClass(ValueGenerator::class)]
+#[Framework\Attributes\CoversClass(DataGenerator\ConcatenatingValueGenerator::class)]
+#[Framework\Attributes\UsesClass(DataGenerator\Exception\InvalidGeneratorsException::class)]
+#[Framework\Attributes\UsesClass(DataGenerator\ValueGenerator::class)]
 final class ConcatenatingValueGeneratorTest extends Framework\TestCase
 {
-    use Test\Util\Helper;
+    use DataGenerator\Test\Util\Helper;
 
     public function testConstructorRejectsEmptyGenerators(): void
     {
-        $this->expectException(Exception\InvalidGeneratorsException::class);
+        $this->expectException(DataGenerator\Exception\InvalidGeneratorsException::class);
 
-        new ConcatenatingValueGenerator();
+        new DataGenerator\ConcatenatingValueGenerator();
     }
 
     public function testGenerateReturnsGeneratorThatYieldsValuesFromOneGenerator(): void
     {
         $values = self::faker()->words();
 
-        $generator = new ConcatenatingValueGenerator(new ValueGenerator(...$values));
+        $generator = new DataGenerator\ConcatenatingValueGenerator(new DataGenerator\ValueGenerator(...$values));
 
         $generated = \iterator_to_array($generator->generate());
 
@@ -44,12 +41,12 @@ final class ConcatenatingValueGeneratorTest extends Framework\TestCase
 
     public function testGenerateReturnsGeneratorThatYieldsValuesFromTwoGenerators(): void
     {
-        $generator = new ConcatenatingValueGenerator(
-            new ValueGenerator(
+        $generator = new DataGenerator\ConcatenatingValueGenerator(
+            new DataGenerator\ValueGenerator(
                 'foo',
                 'bar',
             ),
-            new ValueGenerator(
+            new DataGenerator\ValueGenerator(
                 '1',
                 '2',
                 '3',
@@ -72,14 +69,14 @@ final class ConcatenatingValueGeneratorTest extends Framework\TestCase
 
     public function testGenerateReturnsGeneratorThatYieldsValuesFromThreeGenerators(): void
     {
-        $generator = new ConcatenatingValueGenerator(
-            new ValueGenerator(
+        $generator = new DataGenerator\ConcatenatingValueGenerator(
+            new DataGenerator\ValueGenerator(
                 'foo',
                 'bar',
                 'baz',
             ),
-            new ValueGenerator('-'),
-            new ValueGenerator(
+            new DataGenerator\ValueGenerator('-'),
+            new DataGenerator\ValueGenerator(
                 'qux',
                 'quux',
             ),

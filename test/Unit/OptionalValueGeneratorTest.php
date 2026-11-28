@@ -11,29 +11,27 @@ declare(strict_types=1);
  * @see https://github.com/ergebnis/data-generator
  */
 
-use Ergebnis\DataGenerator\Exception;
-use Ergebnis\DataGenerator\OptionalValueGenerator;
-use Ergebnis\DataGenerator\Test;
+use Ergebnis\DataGenerator;
 use PHPUnit\Framework;
 
-#[Framework\Attributes\CoversClass(OptionalValueGenerator::class)]
-#[Framework\Attributes\UsesClass(Exception\InvalidValuesException::class)]
+#[Framework\Attributes\CoversClass(DataGenerator\OptionalValueGenerator::class)]
+#[Framework\Attributes\UsesClass(DataGenerator\Exception\InvalidValuesException::class)]
 final class OptionalValueGeneratorTest extends Framework\TestCase
 {
-    use Test\Util\Helper;
+    use DataGenerator\Test\Util\Helper;
 
     public function testConstructorRejectsEmptyValues(): void
     {
-        $this->expectException(Exception\InvalidValuesException::class);
+        $this->expectException(DataGenerator\Exception\InvalidValuesException::class);
 
-        new OptionalValueGenerator();
+        new DataGenerator\OptionalValueGenerator();
     }
 
     public function testGenerateReturnsGeneratorThatYieldsValues(): void
     {
         $values = self::faker()->words();
 
-        $generator = new OptionalValueGenerator(...$values);
+        $generator = new DataGenerator\OptionalValueGenerator(...$values);
 
         $generated = \iterator_to_array($generator->generate());
 
